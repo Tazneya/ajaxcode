@@ -56,6 +56,7 @@ echo $data;
  //data insert korteche 
  if(isset($_POST['insert']))
  {
+   //test
      $email = $_POST['email'];
      $pass = $_POST['pass'];
      $mobile = $_POST['mobile'];
