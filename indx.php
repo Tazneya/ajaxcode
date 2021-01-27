@@ -21,7 +21,8 @@
     <h1 class='text-warm'>
     All Record 
     </h1>
-    <div class='records_contant'>
+    <div id='records_contant'>
+
     </div>
     
     </div>
@@ -75,15 +76,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type ="text/javascript">
 
+    //Pageload script start
+
+    $(function() {
+
+        readRecord();
+      });
+    //pageload script end
+
+
+
 
    function readRecord(){
+     
+
     var readrecord = "readrecord";
     $.ajax({
          url:"backend.php",
          type:'POST',
          data:{ readrecord : readrecord
         },
-        success:function(data,status){
+        success:function(data){
            $('#records_contant').html(data);
         }
          });
@@ -106,7 +119,7 @@
 
          },
          success:function(data,status){
-           readRecords();
+           readRecord();
          }
        }
          

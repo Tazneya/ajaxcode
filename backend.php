@@ -21,7 +21,8 @@ $conn = mysqli_connect($servername, $username, $password,$db);
               <th >pass</th>
               <th >Mobile</th>
               <th >Edit action</th>
-              <th >Delete action</th>
+              <th ></th>
+              <th></th>
               
             </tr>';
 
@@ -30,14 +31,14 @@ $tonni = mysqli_query($conn,$query);
 if(mysqli_num_rows($tonni)>0){
     $number =1;
     while($row = mysqli_fetch_array($tonni)){
-
+      
        $data.= '<tr>
          
-          <td>.'$number'.</td>
-          <td>.'$row['email'].' </td>
-          <td>.'$row['pass'].' </td>
-          <td>.'$row['mobile'].' </td>
-          <td>.'$row['email'].' </td>
+          <td>'.$number.'</td>
+          <td>'.$row['email'].'</td>
+          <td>'.$row['pass'].' </td>
+          <td>'.$row['mobile'].' </td>
+          <td>'.$row['email'].' </td>
           
           <td>.<button onclick ="Getuserdetails('.$row['id'].')" class ="btn-warning">Edit</button> </td>
           <td>.<button onclick ="Deleteuser('.$row['id'].')" class ="btn-warning">delete</button> </td>
