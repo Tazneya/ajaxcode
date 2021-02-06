@@ -21,6 +21,29 @@
     <h1 class='text-warm'>
     All Record 
     </h1>
+    <div class="form-group">
+        <label >Email address</label>
+        <input type="email" class="form-control" id="Email" placeholder="Enter email">
+   
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="email" class="form-control" id="pass" placeholder="Enter pass">
+   
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">mobile</label>
+        <input type="mobile" class="form-control" id="mobile" placeholder="Enter mobile">
+   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick ='addRecord()'>Save</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+      <div class = "">
+     
+
+</div>
     <div id='records_contant'>
 
     </div>
@@ -84,8 +107,20 @@
       });
     //pageload script end
 
+//total number rows
+
+// function fetch_data(){
+//   $.ajax({
+//     url: "backend.php",
+//     method: "POST",
+//     success: function(data) {
+//       var rowCount = $('#menu_table_data').html(data).find('tr').length;
+//     }
+//   });
+// }
 
 
+//total number rows end
 
    function readRecord(){
      

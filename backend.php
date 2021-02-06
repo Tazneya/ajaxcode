@@ -50,9 +50,29 @@ if(mysqli_num_rows($tonni)>0){
 $data.='</table>';
 echo $data;
 
-}
-          
 
+}
+
+
+//data sum kore show korbe
+// if(isset($_POST['rowCount'])){
+//   $query = "SELECT * FROM crudtable";
+// $tonni = mysqli_query($conn,$query);
+//   $rows = mysql_num_rows($tonni);
+//   echo "There are " . $rows . " rows in my table.";
+// }
+$sql="SELECT * FROM crudtable";
+
+if ($result=mysqli_query($con,$sql))
+  {
+  // Return the number of rows in result set
+  $rowcount=mysqli_num_rows($result);
+  printf("Result set has %d rows.\n",$rowcount);
+  // Free result set
+  mysqli_free_result($result);
+  }
+
+mysqli_close($con);
 
  //data insert korteche 
  if(isset($_POST['insert']))
